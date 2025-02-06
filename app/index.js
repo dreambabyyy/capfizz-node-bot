@@ -1,1 +1,133 @@
-const _0x432d5d=_0x454d;(function(_0x4f71e9,_0x2f525a){const _0x1ca812=_0x454d,_0x535ef1=_0x4f71e9();while(!![]){try{const _0xe96ffd=parseInt(_0x1ca812(0xb1))/0x1*(parseInt(_0x1ca812(0xb0))/0x2)+parseInt(_0x1ca812(0x96))/0x3+parseInt(_0x1ca812(0xaf))/0x4+parseInt(_0x1ca812(0xb5))/0x5+parseInt(_0x1ca812(0x91))/0x6+parseInt(_0x1ca812(0xae))/0x7*(parseInt(_0x1ca812(0x9d))/0x8)+parseInt(_0x1ca812(0xa2))/0x9*(-parseInt(_0x1ca812(0x8d))/0xa);if(_0xe96ffd===_0x2f525a)break;else _0x535ef1['push'](_0x535ef1['shift']());}catch(_0xbe2fe1){_0x535ef1['push'](_0x535ef1['shift']());}}}(_0x4e97,0x532f4));function _0x4e97(){const _0x227767=['split','{red-fg}Mining\x20failed\x20for\x20','length','exit','Status','box','toFixed','{green-fg}Found\x20','grid','1064ybOZQx','2601300BnNFqQ','10vBBWRv','13633pJrlhv','map','filter','log','2930095qJDmry','{red-fg}Main\x20process\x20failed:\x20','Failed\x20Mines','./src/utils/twist','success','blessed','{red-fg}Authentication\x20failed\x20for\x20','data.txt','checkAuth','points','status','screen','...{/yellow-fg}','push','config','{/green-fg}','stats','miningStats','{green-fg}Mining\x20successful\x20for\x20','{/red-fg}','toString','startPing','email','position','reduce','failedMines','Value','mine','{green-fg}Authentication\x20successful{/green-fg}','successfulMines','utf8','./src/services/dashboard','all','trim','components','getUserInfo','setUserEmail','61970OdmqJh','set','Total\x20Points','\x20unique\x20accounts\x20to\x20process{/green-fg}','2423340WSqTAH','./src/utils/helpers','nodeInfo','nodeId','accountLog','958974UvVipY','Metric','message','userInfo','{red-fg}Authentication\x20failed,\x20skipping\x20account{/red-fg}','N/A','table','28936BLxUUf','{red-fg}Error\x20initializing\x20account:\x20','data','userEmail','Node\x20ID','3249nHKdcI','accountList','{yellow-fg}Attempting\x20to\x20mine\x20for\x20'];_0x4e97=function(){return _0x227767;};return _0x4e97();}const fs=require('fs'),blessed=require(_0x432d5d(0x6d)),contrib=require('blessed-contrib'),dashboardConfig=require(_0x432d5d(0x87)),{bannerConfig}=require(_0x432d5d(0xb8)),CapfizzMiner=require('./src/services/CapfizzMiner'),logger=require('./src/utils/logger'),{delay}=require(_0x432d5d(0x92)),screen=blessed[_0x432d5d(0x73)](dashboardConfig['screen']),grid=new contrib[(_0x432d5d(0xad))]({...dashboardConfig['grid'],'screen':screen});bannerConfig['parent']=screen;function _0x454d(_0x44db3f,_0x1a7b12){const _0x4e972b=_0x4e97();return _0x454d=function(_0x454d11,_0x519ac3){_0x454d11=_0x454d11-0x6d;let _0x2dffc3=_0x4e972b[_0x454d11];return _0x2dffc3;},_0x454d(_0x44db3f,_0x1a7b12);}const bannerBox=blessed[_0x432d5d(0xaa)](bannerConfig),accountLog=grid[_0x432d5d(0x8e)](...dashboardConfig[_0x432d5d(0x8a)]['accountLog'][_0x432d5d(0x7f)],contrib[_0x432d5d(0xb4)],dashboardConfig['components'][_0x432d5d(0x95)][_0x432d5d(0x76)]),miningStats=grid[_0x432d5d(0x8e)](...dashboardConfig['components'][_0x432d5d(0x79)][_0x432d5d(0x7f)],contrib[_0x432d5d(0x9c)],dashboardConfig[_0x432d5d(0x8a)][_0x432d5d(0x79)][_0x432d5d(0x76)]),accountList=grid['set'](...dashboardConfig[_0x432d5d(0x8a)]['accountList'][_0x432d5d(0x7f)],contrib['table'],dashboardConfig[_0x432d5d(0x8a)][_0x432d5d(0xa3)][_0x432d5d(0x76)]);logger['setLogger'](accountLog);const miners=new Map();screen['key'](['escape','q','C-c'],function(_0x407c75,_0x1135e5){const _0x5b7365=_0x432d5d;return miners['forEach'](_0x3a4793=>_0x3a4793['stopPing']()),process[_0x5b7365(0xa8)](0x0);});function updateDashboard(_0x190048){const _0x4313d8=_0x432d5d,_0x3cf92f=_0x190048[_0x4313d8(0xb2)](_0x1dff03=>[_0x1dff03[_0x4313d8(0x7e)]||_0x4313d8(0x9b),_0x1dff03[_0x4313d8(0x72)]||_0x4313d8(0x9b),_0x1dff03[_0x4313d8(0x94)]||'N/A',_0x1dff03[_0x4313d8(0x78)]['totalPoints'][_0x4313d8(0xab)](0x2)+'\x20pts']);accountList['setData']({'headers':['Email',_0x4313d8(0xa9),_0x4313d8(0xa1),_0x4313d8(0x8f)],'data':_0x3cf92f});const _0x7cd90a=_0x190048[_0x4313d8(0x80)]((_0x4983a7,_0x2e5ab3)=>{const _0x2a4cce=_0x4313d8;return _0x4983a7['totalPoints']+=_0x2e5ab3[_0x2a4cce(0x78)]['totalPoints'],_0x4983a7[_0x2a4cce(0x85)]+=_0x2e5ab3[_0x2a4cce(0x78)][_0x2a4cce(0x85)],_0x4983a7['failedMines']+=_0x2e5ab3[_0x2a4cce(0x78)]['failedMines'],_0x4983a7;},{'totalPoints':0x0,'successfulMines':0x0,'failedMines':0x0});miningStats['setData']({'headers':[_0x4313d8(0x97),_0x4313d8(0x82)],'data':[[_0x4313d8(0x8f),_0x7cd90a['totalPoints'][_0x4313d8(0xab)](0x2)],['Successful\x20Mines',_0x7cd90a[_0x4313d8(0x85)]['toString']()],[_0x4313d8(0xb7),_0x7cd90a[_0x4313d8(0x81)][_0x4313d8(0x7c)]()]]}),screen['render']();}async function startMining(_0xcdd4a2,_0x7278fa){const _0x84dc84=_0x432d5d;while(!![]){try{const _0x28cd20=await _0xcdd4a2['checkAuth']();if(!_0x28cd20){logger['log'](_0x84dc84(0x6e)+_0xcdd4a2[_0x84dc84(0xa0)]+'{/red-fg}'),await delay(0x7530);continue;}logger['log'](_0x84dc84(0xa4)+_0xcdd4a2['userEmail']+_0x84dc84(0x74));const _0x289b47=await _0xcdd4a2[_0x84dc84(0x83)]();_0x289b47&&(_0x289b47[_0x84dc84(0xb9)]?(logger[_0x84dc84(0xb4)](_0x84dc84(0x7a)+_0xcdd4a2[_0x84dc84(0xa0)]+':\x20'+_0x289b47[_0x84dc84(0x98)]+_0x84dc84(0x77)),logger['log']('{green-fg}Points\x20earned\x20for\x20'+_0xcdd4a2[_0x84dc84(0xa0)]+':\x20'+_0x289b47[_0x84dc84(0x71)]+'{/green-fg}')):logger['log'](_0x84dc84(0xa6)+_0xcdd4a2[_0x84dc84(0xa0)]+':\x20'+_0x289b47[_0x84dc84(0x98)]+_0x84dc84(0x7b)),updateDashboard(_0x7278fa));}catch(_0x26813c){logger['log']('{red-fg}Error\x20mining\x20for\x20'+_0xcdd4a2[_0x84dc84(0xa0)]+':\x20'+_0x26813c[_0x84dc84(0x98)]+_0x84dc84(0x7b)),await delay(0x2710);}}}async function main(){const _0x2afa8d=_0x432d5d;try{const _0x1b0cfc=fs['readFileSync'](_0x2afa8d(0x6f),_0x2afa8d(0x86))[_0x2afa8d(0xa5)]('\x0a')[_0x2afa8d(0xb3)](_0x1e93cc=>_0x1e93cc[_0x2afa8d(0x89)]()),_0x1d87ef=[...new Set(_0x1b0cfc[_0x2afa8d(0xb2)](_0x4af49b=>_0x4af49b[_0x2afa8d(0x89)]()))];logger[_0x2afa8d(0xb4)](_0x2afa8d(0xac)+_0x1d87ef[_0x2afa8d(0xa7)]+_0x2afa8d(0x90));const _0x280de7=[],_0x1f56e5=[];for(const _0x5974c0 of _0x1d87ef){try{const _0x251553=new CapfizzMiner(_0x5974c0);miners[_0x2afa8d(0x8e)](_0x5974c0,_0x251553);const _0xaec8ec=await _0x251553[_0x2afa8d(0x70)]();if(!_0xaec8ec){logger[_0x2afa8d(0xb4)](_0x2afa8d(0x9a));continue;}logger[_0x2afa8d(0xb4)](_0x2afa8d(0x84));const _0x583289=await _0x251553[_0x2afa8d(0x8b)]();if(_0x583289){const _0x2276fb={'email':_0x583289[_0x2afa8d(0x9f)][_0x2afa8d(0x99)][_0x2afa8d(0x7e)],'status':_0x583289[_0x2afa8d(0x9f)][_0x2afa8d(0x72)],'nodeId':_0x583289['data'][_0x2afa8d(0x93)][_0x2afa8d(0x94)],'stats':_0x251553[_0x2afa8d(0x78)],'cookie':_0x5974c0};_0x280de7[_0x2afa8d(0x75)](_0x2276fb),_0x251553[_0x2afa8d(0x8c)](_0x583289[_0x2afa8d(0x9f)][_0x2afa8d(0x99)][_0x2afa8d(0x7e)]),_0x251553[_0x2afa8d(0x7d)](),_0x1f56e5[_0x2afa8d(0x75)](startMining(_0x251553,_0x280de7));}}catch(_0x402cc4){logger[_0x2afa8d(0xb4)](_0x2afa8d(0x9e)+_0x402cc4[_0x2afa8d(0x98)]+'{/red-fg}');}}updateDashboard(_0x280de7),await Promise[_0x2afa8d(0x88)](_0x1f56e5);}catch(_0x97bc94){logger['log'](_0x2afa8d(0xb6)+_0x97bc94[_0x2afa8d(0x98)]+_0x2afa8d(0x7b));}}screen['render'](),main();
+const fs = require('fs');
+const blessed = require("blessed");
+const contrib = require('blessed-contrib');
+const dashboardConfig = require("./src/services/dashboard");
+const { bannerConfig } = require("./src/utils/twist");
+const CapfizzMiner = require('./src/services/CapfizzMiner');
+const logger = require('./src/utils/logger');
+const { delay } = require("./src/utils/helpers");
+
+const screen = blessed.screen(dashboardConfig.screen);
+const grid = new contrib.grid({
+  ...dashboardConfig.grid,
+  'screen': screen
+});
+
+bannerConfig.parent = screen;
+
+const accountLog = grid.set(...dashboardConfig.components.accountLog.position, contrib.log, dashboardConfig.components.accountLog.config);
+const miningStats = grid.set(...dashboardConfig.components.miningStats.position, contrib.table, dashboardConfig.components.miningStats.config);
+const accountList = grid.set(...dashboardConfig.components.accountList.position, contrib.table, dashboardConfig.components.accountList.config);
+
+logger.setLogger(accountLog);
+
+const miners = new Map();
+
+screen.key(['escape', 'q', 'C-c'], function (_0x407c75, _0x1135e5) {
+  miners.forEach(_0x3a4793 => _0x3a4793.stopPing());
+  return process.exit(0x0);
+});
+
+function updateDashboard(_0x190048) {
+  const _0x3cf92f = _0x190048.map(_0x1dff03 => [_0x1dff03.email || "N/A", _0x1dff03.status || "N/A", _0x1dff03.nodeId || 'N/A', _0x1dff03.stats.totalPoints.toFixed(0x2) + " pts"]);
+  accountList.setData({
+    'headers': ['Email', "Status", "Node ID", "Total Points"],
+    'data': _0x3cf92f
+  });
+
+  const _0x7cd90a = _0x190048.reduce((_0x4983a7, _0x2e5ab3) => {
+    _0x4983a7.totalPoints += _0x2e5ab3.stats.totalPoints;
+    _0x4983a7.successfulMines += _0x2e5ab3.stats.successfulMines;
+    _0x4983a7.failedMines += _0x2e5ab3.stats.failedMines;
+    return _0x4983a7;
+  }, {
+    'totalPoints': 0x0,
+    'successfulMines': 0x0,
+    'failedMines': 0x0
+  });
+
+  miningStats.setData({
+    'headers': ["Metric", "Value"],
+    'data': [["Total Points", _0x7cd90a.totalPoints.toFixed(0x2)], ["Successful Mines", _0x7cd90a.successfulMines.toString()], ["Failed Mines", _0x7cd90a.failedMines.toString()]]
+  });
+
+  screen.render();
+}
+
+async function startMining(_0xcdd4a2, _0x7278fa) {
+  while (true) {
+    try {
+      const _0x28cd20 = await _0xcdd4a2.checkAuth();
+      if (!_0x28cd20) {
+        logger.log("{red-fg}Authentication failed for " + _0xcdd4a2.userEmail + '{/red-fg}');
+        await delay(0x7530);
+        continue;
+      }
+      logger.log("{yellow-fg}Attempting to mine for " + _0xcdd4a2.userEmail + "...{/yellow-fg}");
+      const _0x289b47 = await _0xcdd4a2.mine();
+      if (_0x289b47) {
+        if (_0x289b47.success) {
+          logger.log("{green-fg}Mining successful for " + _0xcdd4a2.userEmail + ": " + _0x289b47.message + "{/green-fg}");
+          logger.log("{green-fg}Points earned for " + _0xcdd4a2.userEmail + ": " + _0x289b47.points + '{/green-fg}');
+        } else {
+          logger.log("{red-fg}Mining failed for " + _0xcdd4a2.userEmail + ": " + _0x289b47.message + "{/red-fg}");
+        }
+        updateDashboard(_0x7278fa);
+      }
+    } catch (_0x26813c) {
+      logger.log("{red-fg}Error mining for " + _0xcdd4a2.userEmail + ": " + _0x26813c.message + "{/red-fg}");
+      await delay(0x2710);
+    }
+  }
+}
+
+async function main() {
+  try {
+    const _0x1b0cfc = fs.readFileSync("data.txt", "utf8").split("\n").filter(_0x1e93cc => _0x1e93cc.trim());
+    const _0x1d87ef = [...new Set(_0x1b0cfc.map(_0x4af49b => _0x4af49b.trim()))];
+    logger.log("{green-fg}Found " + _0x1d87ef.length + " unique accounts to process{/green-fg}");
+    const _0x280de7 = [];
+    const _0x1f56e5 = [];
+    for (const _0x5974c0 of _0x1d87ef) {
+      try {
+        const _0x251553 = new CapfizzMiner(_0x5974c0);
+        miners.set(_0x5974c0, _0x251553);
+        const _0xaec8ec = await _0x251553.checkAuth();
+        if (!_0xaec8ec) {
+          logger.log("{red-fg}Authentication failed, skipping account{/red-fg}");
+          continue;
+        }
+        logger.log("{green-fg}Authentication successful{/green-fg}");
+        const _0x583289 = await _0x251553.getUserInfo();
+        if (_0x583289) {
+          const _0x2276fb = {
+            'email': _0x583289.data.userInfo.email,
+            'status': _0x583289.data.status,
+            'nodeId': _0x583289.data.nodeInfo.nodeId,
+            'stats': _0x251553.stats,
+            'cookie': _0x5974c0
+          };
+          _0x280de7.push(_0x2276fb);
+          _0x251553.setUserEmail(_0x583289.data.userInfo.email);
+          _0x251553.startPing();
+          _0x1f56e5.push(startMining(_0x251553, _0x280de7));
+        }
+      } catch (_0x402cc4) {
+        logger.log("{red-fg}Error initializing account: " + _0x402cc4.message + '{/red-fg}');
+      }
+    }
+    updateDashboard(_0x280de7);
+    await Promise.all(_0x1f56e5);
+  } catch (_0x97bc94) {
+    logger.log("{red-fg}Main process failed: " + _0x97bc94.message + "{/red-fg}");
+  }
+}
+
+module.exports = {
+  updateDashboard,
+  startMining,
+  main,
+  screen,
+  grid,
+  miners
+};
