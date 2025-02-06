@@ -179,7 +179,7 @@ async function main() {
   }
 }
 
-export {
+module.exports {
   updateDashboard,
   startMining,
   main,
