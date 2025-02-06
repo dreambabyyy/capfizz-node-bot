@@ -179,7 +179,7 @@ async function main() {
   }
 }
 
-module.exports {
+module.exports = {
   main,
   screen
 };
