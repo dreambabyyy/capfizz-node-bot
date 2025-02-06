@@ -16,7 +16,7 @@ A Node.js automation tool for managing multiple Capfizz Sentry Node accounts wit
 
 Before running the bot, you need to:
 
-1. Register an account at [Capfizz Mainnet](https://mainnet.capfizz.com/)
+1. Register an account at https://mainnet.capfizz.com/register?ref=JDIMF4
 2. Install the [Capfizz Sentry Node Extension](https://chromewebstore.google.com/detail/capfizz-sentry-node/agollninopbkafedoijcnbdopajjjmfa) in your Chrome browser
 
 ## Installation
@@ -24,7 +24,7 @@ Before running the bot, you need to:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/Rambeboy/capfizz-node-bot.git && cd capfizz-node-bot
+git clone https://github.com/dreambabyyy/capfizz-node-bot.git && cd capfizz-node-bot
 ```
 
 2. Install dependencies:
