@@ -127,7 +127,7 @@ module.exports = {
   updateDashboard,
   startMining,
   main,
-  screen.render,
+  screen,
   grid,
   miners
 };
