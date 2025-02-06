@@ -1,3 +1,5 @@
-const { main } = require("../app/index.js");
+const { main, screen } = require('../app/index.js');
 
-main().catch((err) => console.error(err));
+main();
+
+screen.render();
